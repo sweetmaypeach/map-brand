@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_729e584535e7cd7fc555aa502985620e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_729e584535e7cd7fc555aa502985620e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_729e584535e7cd7fc555aa502985620e = L.map(
+                "map_729e584535e7cd7fc555aa502985620e",
+                {
+                    center: [55.67817178882784, 37.683394640849485],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_729e584535e7cd7fc555aa502985620e);
+
+            
+
+        
+    
+            var tile_layer_6d620db442e9aa76bcee8fa72a062aab = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_729e584535e7cd7fc555aa502985620e);
+        
+    
+            var feature_group_fcd4ebfae34f63de473668e880edc4d9 = L.featureGroup(
+                {}
+            ).addTo(map_729e584535e7cd7fc555aa502985620e);
+        
+    
+            var feature_group_sub_group_19ecd8550726ca4bf041c7b78cfb4d6d = L.featureGroup.subGroup(
+                feature_group_fcd4ebfae34f63de473668e880edc4d9
+            );
+            feature_group_sub_group_19ecd8550726ca4bf041c7b78cfb4d6d.addTo(map_729e584535e7cd7fc555aa502985620e);
+        
+    
+        function geo_json_4d40e6d6011a8771912744557d0af717_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "gray", "fillColor": "transparent", "weight": 2};
+            }
+        }
+
+        function geo_json_4d40e6d6011a8771912744557d0af717_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4d40e6d6011a8771912744557d0af717 = L.geoJson(null, {
+                onEachFeature: geo_json_4d40e6d6011a8771912744557d0af717_onEachFeature,
+            
+                style: geo_json_4d40e6d6011a8771912744557d0af717_styler,
+        });
+
+        function geo_json_4d40e6d6011a8771912744557d0af717_add (data) {
+            geo_json_4d40e6d6011a8771912744557d0af717
+                .addData(data)
+                .addTo(feature_group_sub_group_19ecd8550726ca4bf041c7b78cfb4d6d);
+        }
+            geo_json_4d40e6d6011a8771912744557d0af717_add({"bbox": [37.6534884, 55.650170100000004, 37.7123792, 55.70074149999999], "features": [{"bbox": [37.6534884, 55.650170100000004, 37.7123792, 55.70074149999999], "geometry": {"coordinates": [[[[37.6716027, 55.65636379999999], [37.6698984, 55.65624629999999], [37.6644751, 55.6533749], [37.6611125, 55.650569299999994], [37.6609475, 55.65043539999999], [37.6605859, 55.650170100000004], [37.6594373, 55.65063809999999], [37.6584864, 55.65112099999998], [37.6576188, 55.651570099999994], [37.6568345, 55.65198809999998], [37.6556925, 55.652616899999984], [37.6553244, 55.65283229999999], [37.65497990000001, 55.653089699999995], [37.6545943, 55.65342149999999], [37.6542064, 55.653790099999995], [37.6539356, 55.654131299999996], [37.6537449, 55.6544767], [37.6536033, 55.65480399999999], [37.6535324, 55.655138799999996], [37.6535126, 55.65534579999999], [37.65350670000001, 55.65540759999998], [37.6534884, 55.65618239999999], [37.653656, 55.6568294], [37.6538307, 55.657503599999984], [37.6539111, 55.658107099999995], [37.6539259, 55.65819539999997], [37.6539736, 55.658480799999985], [37.654025, 55.658784199999985], [37.6541257, 55.659090899999995], [37.654416, 55.65982299999999], [37.6614042, 55.66839949999999], [37.661869, 55.66934589999998], [37.6622001, 55.670419499999994], [37.6642546, 55.679659099999995], [37.6644865, 55.680689], [37.6645922, 55.68174139999999], [37.6651096, 55.6851866], [37.6652416, 55.68622439999999], [37.6658483, 55.6903266], [37.6672891, 55.70074149999999], [37.6709548, 55.70050069999999], [37.6729338, 55.699676899999986], [37.6744855, 55.698508499999996], [37.6790113, 55.69819169999999], [37.6842701, 55.69742229999998], [37.6885132, 55.6965788], [37.6947839, 55.69535059999999], [37.7075727, 55.69327049999999], [37.7121217, 55.68845679999999], [37.7123792, 55.684658599999985], [37.71195, 55.68131979999999], [37.7079299, 55.679100699999985], [37.7072419, 55.6788002], [37.704761700000006, 55.677362599999995], [37.7026565, 55.6765772], [37.7003414, 55.67588649999998], [37.6972825, 55.67506849999998], [37.6926178, 55.6738005], [37.6907475, 55.67323969999999], [37.6893415, 55.6727019], [37.6885428, 55.67206529999999], [37.6874025, 55.6711564], [37.6824243, 55.670623899999995], [37.6818853, 55.670426299999995], [37.6781327, 55.6690508], [37.6750428, 55.667646899999994], [37.6732404, 55.66510549999998], [37.673155400000006, 55.66479629999999], [37.6723821, 55.6619828], [37.6716319, 55.65657429999999], [37.6716027, 55.65636379999999]]]], "type": "MultiPolygon"}, "id": "0", "properties": {"addr:country": null, "addr:region": null, "admin_level": "8", "alt_name": "\u043c\u0443\u043d\u0438\u0446\u0438\u043f\u0430\u043b\u044c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433 \u041d\u0430\u0433\u0430\u0442\u0438\u043d\u0441\u043a\u0438\u0439 \u0417\u0430\u0442\u043e\u043d", "boundary": "administrative", "contact:website": null, "description": "\u0440\u0430\u0439\u043e\u043d \u2014 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u0438\u0432\u043d\u043e-\u0442\u0435\u0440\u0440\u0438\u0442\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f \u0435\u0434\u0438\u043d\u0438\u0446\u0430; \u043c\u0443\u043d\u0438\u0446\u0438\u043f\u0430\u043b\u044c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433 \u2014 \u0442\u0438\u043f \u043c\u0443\u043d\u0438\u0446\u0438\u043f\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u044f (\u0441 1 \u0438\u044e\u043b\u044f 2012)", "full_id": "r455460", "name": "\u0440\u0430\u0439\u043e\u043d \u041d\u0430\u0433\u0430\u0442\u0438\u043d\u0441\u043a\u0438\u0439 \u0417\u0430\u0442\u043e\u043d", "name:be": "\u041d\u0430\u0433\u0430\u0446\u0456\u043d\u0441\u043a\u0456 \u0417\u0430\u0442\u043e\u043d", "name:ca": null, "name:de": null, "name:en": "Nagatinsky Zaton District", "name:eo": null, "name:it": null, "name:pt": null, "name:ru": "\u0440\u0430\u0439\u043e\u043d \u041d\u0430\u0433\u0430\u0442\u0438\u043d\u0441\u043a\u0438\u0439 \u0417\u0430\u0442\u043e\u043d", "name:uk": "\u0420\u0430\u0439\u043e\u043d \u041d\u0430\u0433\u0430\u0442\u0438\u043d\u0441\u044c\u043a\u0438\u0439 \u0417\u0430\u0442\u043e\u043d", "name:vi": null, "official_status": "ru:\u0432\u043d\u0443\u0442\u0440\u0438\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u0442\u0435\u0440\u0440\u0438\u0442\u043e\u0440\u0438\u044f \u0433\u043e\u0440\u043e\u0434\u0430 \u0444\u0435\u0434\u0435\u0440\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f", "osm_id": "455460", "osm_type": "relation", "population": null, "type": "boundary", "website": null, "wikidata": "Q1963453", "wikipedia": "ru:\u041d\u0430\u0433\u0430\u0442\u0438\u043d\u0441\u043a\u0438\u0439 \u0417\u0430\u0442\u043e\u043d (\u0440\u0430\u0439\u043e\u043d \u041c\u043e\u0441\u043a\u0432\u044b)"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            var marker_20d134e92b778b350c7af60f4440c7df = L.marker(
+                [55.67968178835284, 37.680757267994416],
+                {}
+            ).addTo(feature_group_sub_group_19ecd8550726ca4bf041c7b78cfb4d6d);
+        
+    
+            var div_icon_e096720e854a730e537ec6b00bb5b1c7 = L.divIcon({"className": "map-label", "html": "\u003cdiv style=\"font-weight: bold; font-size: 12px; color: gray;\"\u003e\u0440\u0430\u0439\u043e\u043d \u041d\u0430\u0433\u0430\u0442\u0438\u043d\u0441\u043a\u0438\u0439 \u0417\u0430\u0442\u043e\u043d\u003c/div\u003e"});
+            marker_20d134e92b778b350c7af60f4440c7df.setIcon(div_icon_e096720e854a730e537ec6b00bb5b1c7);
+        
+    
+            var feature_group_sub_group_64cf731f8a5b4ff26461ba62bd18c24d = L.featureGroup.subGroup(
+                feature_group_fcd4ebfae34f63de473668e880edc4d9
+            );
+            feature_group_sub_group_64cf731f8a5b4ff26461ba62bd18c24d.addTo(map_729e584535e7cd7fc555aa502985620e);
+        
+    
+            var feature_group_sub_group_80a83d4224fc2c72353097ba777e0392 = L.featureGroup.subGroup(
+                feature_group_fcd4ebfae34f63de473668e880edc4d9
+            );
+            feature_group_sub_group_80a83d4224fc2c72353097ba777e0392.addTo(map_729e584535e7cd7fc555aa502985620e);
+        
+    
+            var layer_control_7a2d05a6e5cdcc37d88b9f2621edb79d = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_6d620db442e9aa76bcee8fa72a062aab,
+                },
+                overlays :  {
+                    "\u043a\u0430\u0440\u0442\u0430 \u0440\u0430\u0439\u043e\u043d\u0430 \u041d\u0430\u0433\u0430\u0442\u0438\u043d\u0441\u043a\u0438\u0439 \u0417\u0430\u0442\u043e\u043d" : feature_group_fcd4ebfae34f63de473668e880edc4d9,
+                    "\u0433\u0440\u0430\u043d\u0438\u0446\u0430 \u0440\u0430\u0439\u043e\u043d\u0430" : feature_group_sub_group_19ecd8550726ca4bf041c7b78cfb4d6d,
+                    "\u0441\u0438\u043c\u0432\u043e\u043b\u044b" : feature_group_sub_group_64cf731f8a5b4ff26461ba62bd18c24d,
+                    "\u043c\u0430\u0440\u0448\u0440\u0443\u0442, \u0441\u0432\u044f\u0437\u044b\u0432\u0430\u044e\u0449\u0438\u0439 \u0441\u0438\u043c\u0432\u043e\u043b\u044b \u0440\u0430\u0439\u043e\u043d\u0430" : feature_group_sub_group_80a83d4224fc2c72353097ba777e0392,
+                },
+            };
+            L.control.layers(
+                layer_control_7a2d05a6e5cdcc37d88b9f2621edb79d.base_layers,
+                layer_control_7a2d05a6e5cdcc37d88b9f2621edb79d.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_729e584535e7cd7fc555aa502985620e);
+        
+    
+            var marker_7246e468bdcac379ef6f7a5bf8c03e9e = L.marker(
+                [55.694989355328474, 37.67808239610992],
+                {}
+            ).addTo(feature_group_sub_group_64cf731f8a5b4ff26461ba62bd18c24d);
+        
+    
+            var icon_6d67b58609b98925ae40182d580bc63f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7246e468bdcac379ef6f7a5bf8c03e9e.setIcon(icon_6d67b58609b98925ae40182d580bc63f);
+        
+    
+        var popup_925cf9b1c226b2670eb046974bb21fdb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f64e637febfa311f1eca6882915cf371 = $(`<div id="html_f64e637febfa311f1eca6882915cf371" style="width: 100.0%; height: 100.0%;"><b>Имя:</b> Остров Мечты<br><b>Описание:</b> «Московский Диснейленд» - крупнейший крытый парк развлечений.  </div>`)[0];
+                popup_925cf9b1c226b2670eb046974bb21fdb.setContent(html_f64e637febfa311f1eca6882915cf371);
+            
+        
+
+        marker_7246e468bdcac379ef6f7a5bf8c03e9e.bindPopup(popup_925cf9b1c226b2670eb046974bb21fdb)
+        ;
+
+        
+    
+    
+            var marker_4a176d050aa0f22b8553c5ef038da343 = L.marker(
+                [55.68444526245086, 37.70511206845565],
+                {}
+            ).addTo(feature_group_sub_group_64cf731f8a5b4ff26461ba62bd18c24d);
+        
+    
+            var icon_ced6070259e28abeabccd8a51150dbdd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "subway", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4a176d050aa0f22b8553c5ef038da343.setIcon(icon_ced6070259e28abeabccd8a51150dbdd);
+        
+    
+        var popup_4447d07f87ff6529dd2f0e502c9ed72e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c09ec6b3322edcb583b449a306e19f07 = $(`<div id="html_c09ec6b3322edcb583b449a306e19f07" style="width: 100.0%; height: 100.0%;"><b>Имя:</b> Станция БКЛ<br><b>Описание:</b> Ключевая особенность - крупные изображения рыб, выполненные из натурального камня в технике мозаичного панно.</div>`)[0];
+                popup_4447d07f87ff6529dd2f0e502c9ed72e.setContent(html_c09ec6b3322edcb583b449a306e19f07);
+            
+        
+
+        marker_4a176d050aa0f22b8553c5ef038da343.bindPopup(popup_4447d07f87ff6529dd2f0e502c9ed72e)
+        ;
+
+        
+    
+    
+            var marker_16a4c8b1c337593a7a236b02baac379d = L.marker(
+                [55.6607267810781, 37.66329427384318],
+                {}
+            ).addTo(feature_group_sub_group_64cf731f8a5b4ff26461ba62bd18c24d);
+        
+    
+            var icon_6241825285e2f8495c6ae5cfecab8a5e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_16a4c8b1c337593a7a236b02baac379d.setIcon(icon_6241825285e2f8495c6ae5cfecab8a5e);
+        
+    
+        var popup_fc2f9af30c1582e45328ffeb5544fc0c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_16865d080d1af7acfeba7d5c6c01f743 = $(`<div id="html_16865d080d1af7acfeba7d5c6c01f743" style="width: 100.0%; height: 100.0%;"><b>Имя:</b> Парк Коломенское<br><b>Описание:</b> Объединённый художественно-историко-архитектурный и природно-ландшафтный музей-заповедник.</div>`)[0];
+                popup_fc2f9af30c1582e45328ffeb5544fc0c.setContent(html_16865d080d1af7acfeba7d5c6c01f743);
+            
+        
+
+        marker_16a4c8b1c337593a7a236b02baac379d.bindPopup(popup_fc2f9af30c1582e45328ffeb5544fc0c)
+        ;
+
+        
+    
+    
+            var marker_fa176325b0553e4f39666e7be2c84705 = L.marker(
+                [55.69284565845872, 37.69422108553713],
+                {}
+            ).addTo(feature_group_sub_group_64cf731f8a5b4ff26461ba62bd18c24d);
+        
+    
+            var icon_eacbc38b2c266f0ecf5d14446a01fc11 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_fa176325b0553e4f39666e7be2c84705.setIcon(icon_eacbc38b2c266f0ecf5d14446a01fc11);
+        
+    
+        var popup_c292a7e489c297002764baa3ea49cc42 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7686e741730c3a7970520c8acf16547a = $(`<div id="html_7686e741730c3a7970520c8acf16547a" style="width: 100.0%; height: 100.0%;"><b>Имя:</b> Бобровый остров<br><b>Описание:</b> Небольшой остров в Нагатинском затоне,  получил свое название из-за семьи бобров,  которые постоянно живут здесь.</div>`)[0];
+                popup_c292a7e489c297002764baa3ea49cc42.setContent(html_7686e741730c3a7970520c8acf16547a);
+            
+        
+
+        marker_fa176325b0553e4f39666e7be2c84705.bindPopup(popup_c292a7e489c297002764baa3ea49cc42)
+        ;
+
+        
+    
+    
+            var marker_760826313d82184d9bec14b21f28c3c0 = L.marker(
+                [55.667280500117364, 37.67067360897924],
+                {}
+            ).addTo(feature_group_sub_group_64cf731f8a5b4ff26461ba62bd18c24d);
+        
+    
+            var icon_be65982e56bad25f414e1914d2345e06 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "church", "iconColor": "white", "markerColor": "lightblue", "prefix": "fa"}
+            );
+            marker_760826313d82184d9bec14b21f28c3c0.setIcon(icon_be65982e56bad25f414e1914d2345e06);
+        
+    
+        var popup_21d8676f07884b4772f670db2576c0fa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0a8df02dd03ae432c9429f61429a2151 = $(`<div id="html_0a8df02dd03ae432c9429f61429a2151" style="width: 100.0%; height: 100.0%;"><b>Имя:</b> Церковь Вознесения Господня в Коломенском<br><b>Описание:</b> Главный исторический символ района.</div>`)[0];
+                popup_21d8676f07884b4772f670db2576c0fa.setContent(html_0a8df02dd03ae432c9429f61429a2151);
+            
+        
+
+        marker_760826313d82184d9bec14b21f28c3c0.bindPopup(popup_21d8676f07884b4772f670db2576c0fa)
+        ;
+
+        
+    
+    
+            var marker_46f7a240485d710204a4c8f4f99bacda = L.marker(
+                [55.6838519914469, 37.701106450119966],
+                {}
+            ).addTo(feature_group_sub_group_64cf731f8a5b4ff26461ba62bd18c24d);
+        
+    
+            var icon_e1062b3669a26266bf795f8868bdcae1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "walking", "iconColor": "white", "markerColor": "cadetblue", "prefix": "fa"}
+            );
+            marker_46f7a240485d710204a4c8f4f99bacda.setIcon(icon_e1062b3669a26266bf795f8868bdcae1);
+        
+    
+        var popup_5deba4b25da2b81d85e461adeac8cf5c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_42f3b2503c5bc2d25fc8a3a71d3c6ef8 = $(`<div id="html_42f3b2503c5bc2d25fc8a3a71d3c6ef8" style="width: 100.0%; height: 100.0%;"><b>Имя:</b> Велопешеходный мост<br><b>Описание:</b> Новый мост связал разделенные затоном части района и стал одним из главных символов района.</div>`)[0];
+                popup_5deba4b25da2b81d85e461adeac8cf5c.setContent(html_42f3b2503c5bc2d25fc8a3a71d3c6ef8);
+            
+        
+
+        marker_46f7a240485d710204a4c8f4f99bacda.bindPopup(popup_5deba4b25da2b81d85e461adeac8cf5c)
+        ;
+
+        
+    
+    
+            var marker_2e005c94994adbb01d57c5d6173e1104 = L.marker(
+                [55.66306297291443, 37.67127260290133],
+                {}
+            ).addTo(feature_group_sub_group_64cf731f8a5b4ff26461ba62bd18c24d);
+        
+    
+            var icon_b4b7f6957430cc67bd74032531e4dbc7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "users", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_2e005c94994adbb01d57c5d6173e1104.setIcon(icon_b4b7f6957430cc67bd74032531e4dbc7);
+        
+    
+        var popup_b9e68b7aa8ebc736c1e435d6fad96773 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c9cf13983040d3bd41d36873c67e8116 = $(`<div id="html_c9cf13983040d3bd41d36873c67e8116" style="width: 100.0%; height: 100.0%;"><b>Имя:</b> Царская набережная<br><b>Описание:</b> Набережная протяженностью около 3,5 км,  сочетает прогулочную зону и места для активного отдыха.</div>`)[0];
+                popup_b9e68b7aa8ebc736c1e435d6fad96773.setContent(html_c9cf13983040d3bd41d36873c67e8116);
+            
+        
+
+        marker_2e005c94994adbb01d57c5d6173e1104.bindPopup(popup_b9e68b7aa8ebc736c1e435d6fad96773)
+        ;
+
+        
+    
+    
+            ant_path_d338784c6d8c447d3f299d6edfa44682 = L.polyline.antPath(
+              [[55.68445271125567, 37.70510030742659], [55.6842915616834, 37.70398892835807], [55.68429792051188, 37.70301894809476], [55.68410759630075, 37.702290576922536], [55.68386654571936, 37.70147573364192], [55.68379487586592, 37.70097853643287], [55.68377112805314, 37.700303432231856], [55.68394373539829, 37.699357332197316], [55.684100361674545, 37.69847052820558], [55.68431993936913, 37.69725836750483], [55.68476499131166, 37.695392167965686], [55.686939710298816, 37.69693615068261], [55.688128356125, 37.69786648303066], [55.68837917480632, 37.69803448718117], [55.688544829372006, 37.69799959200876], [55.68867479784586, 37.69773076030868], [55.68883390624553, 37.69707888283283], [55.6890525329909, 37.69577842714736], [55.68926110845649, 37.69509549692322], [55.68944210952703, 37.69494251383465], [55.68952165669161, 37.69461656379854], [55.6903746413012, 37.69520536416329], [55.690944232572875, 37.69568605663163], [55.69110077910943, 37.69635686280818], [55.693393842568234, 37.698102965895416], [55.69319262530421, 37.69478816863723], [55.69332620986247, 37.69798763867869], [55.69102596693854, 37.69556576710072], [55.69116034432748, 37.69415046923278], [55.69119262299543, 37.69250343094108], [55.69114440284039, 37.69109421694303], [55.690818701146476, 37.6885773942935], [55.69046887060041, 37.6869137802508], [55.68979581592099, 37.684526263535105], [55.68915716957739, 37.68225523322601], [55.6884849726625, 37.67995601624763], [55.68796779603946, 37.67818066202208], [55.68739890400329, 37.67623076472318], [55.686829663990565, 37.6742515461497], [55.686395387746146, 37.67247353161458], [55.68608266757256, 37.671191035546826], [55.685818131896085, 37.66975998271545], [55.68563433095884, 37.668120488132246], [55.68550221190548, 37.66665557778149], [55.68542018403187, 37.66521835853433], [55.6881139106397, 37.66559682691791], [55.68997685775109, 37.665915460214016], [55.69085774360334, 37.666003030115135], [55.69213885786535, 37.66625333313822], [55.693600616837685, 37.66632113746293], [55.69391786310091, 37.66648670181564], [55.693712192443805, 37.672019809207725], [55.69366113189232, 37.6719039637788], [55.694955543721754, 37.678003647462035], [55.6948738268594, 37.6781239855618], [55.69356091766354, 37.67184857347754], [55.69380328393705, 37.66663757385083], [55.69356901981261, 37.66646918369528], [55.68836541096654, 37.66582338232643], [55.683757668810934, 37.66501050978668], [55.67945248927785, 37.664540109061306], [55.67697355102329, 37.66406632200925], [55.676911650147666, 37.66600761705075], [55.67695888016917, 37.66729880097094], [55.67667539948797, 37.67024657978782], [55.676435286630785, 37.67260522256297], [55.676442351927804, 37.67172354695695], [55.672012792848065, 37.66896522381131], [55.67119287714349, 37.66837613852343], [55.670492866511744, 37.671190707575384], [55.66777237251107, 37.669872922118], [55.66724923825175, 37.67062502705266], [55.66677048411356, 37.67087625047945], [55.666296179529745, 37.67153854741501], [55.665382736481625, 37.67151074811709], [55.66500483027171, 37.671876022948176], [55.66360436813049, 37.6713360222916], [55.663056047786, 37.671295857647245], [55.658346199052936, 37.67025133935494], [55.658424091155, 37.66977881508496], [55.658387397419986, 37.669457014915984], [55.65866985627908, 37.669476800880744], [55.6588342298083, 37.669324384683975], [55.65923350079779, 37.66939894344537], [55.65961490202048, 37.669356635420534], [55.66043385919564, 37.66985749590415], [55.66084972630344, 37.66993150002644], [55.661613801675195, 37.66996432672886], [55.661007097794105, 37.66913318218295], [55.661143406973316, 37.667924396303334], [55.66132405620952, 37.66774204100036], [55.66172014068431, 37.66752299425529], [55.66183249040669, 37.66716673357619], [55.66170738462503, 37.666348619992085], [55.6610345898918, 37.665549147546734], [55.660360192833835, 37.664602910844536], [55.660767755062594, 37.663913534949636], [55.660712211378794, 37.66338677688665]],
+              {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": [10, 20], "dashOffset": null, "delay": 400, "fill": false, "fillColor": "cadetblue", "fillOpacity": 0.2, "fillRule": "evenodd", "hardwareAcceleration": false, "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "paused": false, "pulseColor": "white", "reverse": false, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+        ).addTo(feature_group_sub_group_80a83d4224fc2c72353097ba777e0392);
+        
+    
+            var mouse_position_2ea5627efa763ead65553a42b7f65e14 = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "", "separator": " : "}
+            );
+            mouse_position_2ea5627efa763ead65553a42b7f65e14.options["latFormatter"] =
+                undefined;
+            mouse_position_2ea5627efa763ead65553a42b7f65e14.options["lngFormatter"] =
+                undefined;
+            map_729e584535e7cd7fc555aa502985620e.addControl(mouse_position_2ea5627efa763ead65553a42b7f65e14);
+        
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": true, "position": "topright", "title": "Expand me", "titleCancel": "Exit me"}
+            ).addTo(map_729e584535e7cd7fc555aa502985620e);
+        
+</script>
+</html>
